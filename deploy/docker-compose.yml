@@ -1,0 +1,15 @@
+services:
+  portmesh:
+    build: .
+    image: portmesh:local
+    container_name: portmesh
+    restart: unless-stopped
+    ports:
+      - "7900:7900"
+      - "7901:7901"
+    environment:
+      # set these in a .env next to this file when the UI is opened through a proxy or a name agents cannot use
+      PORTMESH_AGENT_ADDR: ${PORTMESH_AGENT_ADDR:-}
+      PORTMESH_BASE_URL: ${PORTMESH_BASE_URL:-}
+    volumes:
+      - ./data:/data
