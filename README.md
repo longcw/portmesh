@@ -4,6 +4,8 @@ Port forwards between your machines, managed from one web page. Each device runs
 
 The web UI shows a map of devices: drag from the device that runs a service to the device that should listen, type the port, done. Each forward shows live status (listening, bind errors with the process holding the port, open sessions, bytes) and can be edited, disabled or deleted from the map or the table.
 
+![portmesh web UI: a map of four devices with forwards between them, and the forwards table with live status and traffic](docs/screenshot.png)
+
 See [DESIGN.md](DESIGN.md) for how it works and why it is not built on an existing tunnel.
 
 ## Run the controller
